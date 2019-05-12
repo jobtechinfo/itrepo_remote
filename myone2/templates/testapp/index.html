@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/myone21.css" %}">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style >
+  body{
+    background-image: url("https://media3.giphy.com/media/8KKRIP5ZHUo2k/giphy.gif?cid=790b76115cc1132f4b4450796305511c");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+  }
+  .mydiv{
+    padding-top: 40px;
+    font-style: italic;
+    font-family: cursive;
+    color: yellow;
+    font-weight: 700;
+  }
+  #anchr{
+    color: yellow;
+    font-family:monospace;
+    background: black;
+    padding-left: 10px;
+  }
+    #anchr1{
+    color: yellow;
+    font-family:monospace;
+    background: black;
+
+  }
+  #onestyle{
+    background: rgb(255, 255, 0);
+
+
+  }
+  #logout{
+    color: red;
+  }
+</style>
+    <title></title>
+  </head>
+  <body>
+             <nav class="navbar navbar-default" id="onestyle">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+
+      <a class="navbar-brand" href="#">BHARATH</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/signup">signin</a></li>
+        <li id="/login"><a href="/accounts/login">login</a></li>
+        <li id="/logout"><a href="/accounts/logout">logout</a></li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+  <div class="mydiv"  align=center>
+
+
+        <h1>welcome to bharath wall</h1>
+        <h1>Number of software jobs are available here</h1>
+        <h1>click to see job information</h1>
+
+          <a href="/jobs" id="anchr" class="btn btn-primary lg" role="button" >india jobs</a>
+          <a href="/hydjobs" id="anchr1" class="btn btn-primary lg" role="button">hyd jobs</a>
+          <a href="/bngljobs" id="anchr1" class="btn btn-primary lg" role="button">bngl jobs</a>
+
+    </div>
+
+    </div>
+
+
+
+  </body>
+</html>

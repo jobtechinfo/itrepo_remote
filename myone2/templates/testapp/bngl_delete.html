@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title></title>
+    <style >
+         body{
+           background:yellow;
+         }
+    </style>
+  </head>
+  <body>
+    <form method="post" >
+      <h1>Are you sure to delete</h1>
+    <p>  <input type="text" name="" value="{{cmpdelete.date}}"></p>
+      <p><input type="text" name="" value="{{cmpdelete.company}}"></p>
+      <p><input type="text" name="" value="{{cmpdelete.role}}"></p>
+      <p><input type="text" name="" value="{{cmpdelete.addr}}"></p>
+      <p><input type="text" name="" value="{{cmpdelete.email}}"></p>
+      <p><input type="submit" class="btn btn-danger" name="" value="delete"></p>
+      {%csrf_token%}
+    </form>
+    <a href="/bngljobs" class="btn btn-primary" role='button'>cancel</a>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{%static "css\myone2.css"%}">
+
+    <title></title>
+    <style>
+    a{
+      color:white;
+      background: yellow;
+      color: red;
+    }
+    h1{
+      color: yellow;
+    }
+    body{
+      background-image: url("https://media2.giphy.com/media/6bceQIxfeMKqlb2dK0/giphy.gif?cid=790b76115cc11b994e4f46436728d9f8");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    #onestyle{
+      background: yellow;
+    }
+    </style>
+  </head>
+  <body>
+
+                     <nav class="navbar navbar-default" id="onestyle">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+
+      <a class="navbar-brand" href="#">BHARATH</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+
+
+        <li id="/logout"><a href="/accounts/logout">logout</a></li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+    <h1>companies job information</h1><hr>
+     {% if softjobs %}
+     <table>
+       <thead>
+         <th>Date</th>
+         <th>Company</th>
+         <th>Role</th>
+         <th>Addr</th>
+         <th>Email</th>
+         <th>number</th>
+         <th>delete</th>
+       </thead>
+       {% for myjob in softjobs %}
+       <tr>
+         <td>{{myjob.date}}</td>
+         <td>{{myjob.company}}</td>
+         <td>{{myjob.role}}</td>
+         <td>{{myjob.addr}}</td>
+         <td>{{myjob.email}}</td>
+         <td>{{myjob.number}}</td>
+        <td><a href="/hyddelete/{{myjob.id}}">delete</a></td>
+
+
+
+       </tr>
+       {%endfor%}
+     </table>&nbsp&nbsp
+     {%endif%}&nbsp&nbsp
+     <br>&nbsp&nbsp
+
+
+    <a href="/update1" class="btn btn-primary">update hydjobs information</a>s
+
+  </body>
+</html>
